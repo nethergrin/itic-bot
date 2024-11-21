@@ -1,0 +1,12 @@
+.env
+dump.txt
+.vscode
+tmp
+ocr/*
+test
+metadata/*
+logs/*
+fulltexts/*
+documents/*
+cleantext/*
+data

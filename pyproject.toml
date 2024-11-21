@@ -1,0 +1,12 @@
+[build-systems]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+[project]
+name="itic-rag"
+version="0.0.1"
+authors = [
+  { name="German Grin", email="german.grin@gmail.com" },
+]
+description = "Application to provide a simple RAG in the context of a university course"
+readme = "README.md"
+requires-python = ">=3.12"
