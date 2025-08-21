@@ -13,15 +13,17 @@ class Client:
             self.host = config["PREPROCESSOR_HOST"]
         else: 
             self.host = host
+
         if port is None:
             self.port = config["PREPROCESSOR_PORT"]
         else: 
             self.port = port
-        
+
         if model is None:
             self.model = config["PREPROCESSOR_MODEL"]
         else: 
             self.model = model
+            
         if client is None:
             if config["PREPROCESSOR_CLIENT"] == 'ollama':
                 self.client = ollama.Client(f'{self.host}:{self.port}')
@@ -32,7 +34,8 @@ class Client:
                 import openai
                 self.client = openai.Client(api_key=os.environ["OPENAI_API_KEY"])
             else:
-                raise NotImplementedError(f"No client implementation for {config["PREPROCESOR_CLIENT"]}")
+                preprocessor = config["PREPROCESSOR_CLIENT"]
+                raise NotImplementedError(f"No client implementation for {preprocessor}")
     
     def get_response(self, messages):
         client_type = type(self.client)

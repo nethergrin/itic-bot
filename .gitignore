@@ -9,4 +9,6 @@ logs/*
 fulltexts/*
 documents/*
 cleantext/*
-data
+data/*
+.venv
+*.pyc
