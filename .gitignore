@@ -2,13 +2,10 @@
 dump.txt
 .vscode
 tmp
-ocr/*
 test
-metadata/*
 logs/*
-fulltexts/*
-documents/*
-cleantext/*
 data/*
 .venv
 *.pyc
+data
+itic.zip
