@@ -5,7 +5,8 @@
 1. Update .env file with credentials
 1. Configure the variables in **src/config.py**
 1. Copy the bibliography into _DOCS_DIR_ folder
-1. Start the server 
+1. Start the server with command 'python src/main.py startserver'
+
 1. Execute the scripts in this order:
     1. Extract data
     1. Clean data
