@@ -1,9 +1,7 @@
 import pymupdf
 from utils.chunker import Chunker
 from utils.llm_client import Client
-import ollama
 from datetime import datetime
-from datetime import timedelta
 from preprocessor.preprocessor import Preprocessor
 from config import config
 import logging

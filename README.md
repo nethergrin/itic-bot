@@ -47,3 +47,13 @@ With those questions, the application performs the following:
 1. Retrieves a set of bibliographic chunks based on a semantic search
 1. Sends the user question along with the chunks as context to an LLM for processing
 1. Returns the response to the user as a json structure
+
+# TO-DO
+
+Tasks that need to be added:
+* Add an authorized endpoint to upload new documents into de DOCS_DIR
+* Add features to the DataExtractor class in extractor.py to be able to extract data and metadata from .doc and .docx files
+* Implement the RecursiveCharacterTextSplitter in the utils/chunker.py
+* Verify if the Topic implementation is actually working correctly => UPDATE: it's not. In load_database, have to calculate the topic and add it to the metadata as array
+* Use metadata from METADATA_DIR to populate the metadata field during load_database script
+* Determine the possibility to replace the vector embeddings from local transformers to a LLM call
