@@ -8,7 +8,7 @@ logger = logging.RootLogger(logging.DEBUG)
 fileHandler = logging.FileHandler('./logs/main.log')
 logger.addHandler(fileHandler)
 
-router = APIRouter()
+router = APIRouter(prefix="/api")
 
 @router.post("/extractdata")
 async def extract_data_endpoint(request: Request, background_tasks: BackgroundTasks):

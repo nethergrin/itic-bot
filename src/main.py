@@ -2,10 +2,19 @@ from dotenv import load_dotenv
 import sys, logging, typer, uvicorn
 from config import config
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from api import endpoints
 from utils.scripts import load_database, clean_data, extract_data, extract_metadata, extract_data_ocr
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Adjust as needed
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all HTTP methods, including OPTIONS
+    allow_headers=["*"],
+)
 app.include_router(endpoints.router)
 
 logger = logging.RootLogger(logging.DEBUG) 
